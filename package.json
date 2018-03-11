@@ -1,0 +1,46 @@
+{
+  "name": "tsReactNativeBoilerplate",
+  "version": "0.0.1",
+  "private": false,
+  "author": "Sherief Badran",
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "dev": "react-native start --transformer node_modules/react-native-typescript-transformer/index.js --sourceExts ts,tsx",
+    "fix-lint": "tslint --config tslint.json --exclude '**/*/node_modules/**/*' '+(src)/**/*.+(ts|tsx)' --fix",
+    "start-android-emulator": "cd $ANDROID_HOME/tools && ./emulator -avd Nexus_6P_API_23",
+    "run-android": "react-native run-android",
+    "run-ios": "react-native run-ios",
+    "test": "jest"
+  },
+  "dependencies": {
+    "ramda": "^0.25.0",
+    "react": "16.2.0",
+    "react-native": "0.52.0",
+    "react-native-elements": "^0.19.0",
+    "react-native-simple-radio-button": "^2.7.0",
+    "react-native-tableview": "^2.0.1",
+    "react-native-vector-icons": "^4.5.0",
+    "react-navigation": "^1.0.0-beta.26",
+    "react-redux": "^5.0.6",
+    "recompose": "^0.26.0",
+    "redux": "^4.0.0-beta.1",
+    "styled-components": "^2.4.0",
+    "tslint": "^5.9.1",
+    "tslint-config-beanloop": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^21.1.5",
+    "@types/react": "^16.0.22",
+    "@types/react-native": "^0.50.2",
+    "babel-jest": "22.0.6",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "22.0.6",
+    "react-native-typescript-transformer": "^1.1.4",
+    "react-test-renderer": "16.2.0",
+    "ts-jest": "^21.2.1",
+    "typescript": "^2.6.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
