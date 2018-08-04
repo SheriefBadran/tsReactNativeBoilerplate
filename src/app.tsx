@@ -3,7 +3,7 @@ import {
   Platform,
 } from 'react-native'
 import {Provider} from 'react-redux'
-import {ThemeProvider} from 'styled-components'
+import { ThemeProvider } from 'styled-components'
 import {theme} from './components/ui/layout'
 import {store} from './lib/store'
 
