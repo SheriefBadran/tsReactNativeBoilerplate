@@ -7,7 +7,7 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "dev": "react-native start --transformer node_modules/react-native-typescript-transformer/index.js --sourceExts ts,tsx",
     "fix-lint": "tslint --config tslint.json --exclude '**/*/node_modules/**/*' '+(src)/**/*.+(ts|tsx)' --fix",
-    "start-android-emulator": "cd $ANDROID_HOME/tools && ./emulator -avd Nexus_6P_API_23",
+    "start-nexus": "cd $ANDROID_HOME/tools && ./emulator -avd Nexus_6P_API_23",
     "run-android": "react-native run-android",
     "run-ios": "react-native run-ios",
     "test": "jest"
