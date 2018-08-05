@@ -14,7 +14,7 @@ run `react-native run-ios` or `yarn run-ios`
 
 ## Start Android app
 First setup which emulator you with to use with Android studio. This project assumes `Nexus_6P_API_23` is setup.
-If you setup `Nexus_6P_API_23`, start the project by yarn `start-nexus && react-native run-android`.
+If you setup `Nexus_6P_API_23`, start the project by running `yarn start-nexus & yarn run-android`.
 Otherwise setup any other emulator and add 
 `start-{emulator-name}: "cd $ANDROID_HOME/tools && ./emulator -avd {emulator-name}"` to npm scripts.
 
