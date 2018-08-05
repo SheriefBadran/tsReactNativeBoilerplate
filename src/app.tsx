@@ -2,10 +2,8 @@ import * as React from 'react'
 import {
   Platform,
 } from 'react-native'
-import {Provider} from 'react-redux'
 import { ThemeProvider } from 'styled-components'
 import {theme} from './components/ui/layout'
-import {store} from './lib/store'
 
 /**
  * Selects tabs for ios and drawer for android
@@ -27,8 +25,6 @@ const RootNavigation = Platform.select({
  * for clarity.
  */
 export const App = () =>
-  <Provider store={store}>
     <ThemeProvider theme={theme}>
         <RootNavigation />
     </ThemeProvider>
-  </Provider>
