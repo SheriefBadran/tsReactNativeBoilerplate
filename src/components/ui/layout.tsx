@@ -7,6 +7,10 @@ export const theme = {
 }
 const fontSize = Platform.OS === 'android' ? 20 : 16
 
+export const headerStyle = {
+  backgroundColor: '#FFFFFF',
+}
+
 export const headerTitleStyle = {
   fontFamily: theme.fontFamily,
   fontSize,

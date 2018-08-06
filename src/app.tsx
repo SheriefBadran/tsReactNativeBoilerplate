@@ -1,17 +1,8 @@
 import * as React from 'react'
-import {
-  Platform,
-} from 'react-native'
 import { ThemeProvider } from 'styled-components'
 import {theme} from './components/ui/layout'
+import {createRootNavigator} from './navigators/root-navigator'
 
-/**
- * Selects tabs for ios and drawer for android
- */
-const RootNavigation = Platform.select({
-  ios: () => require('./navigators/tab-navigator').RootTabs,
-  android: () => require('./navigators/drawer-navigator').RootDrawer,
-})()
 /* DISABLE YELLOW ERROR BOX
   console.ignoredYellowBox = [
         'Setting a timer'
@@ -24,7 +15,8 @@ const RootNavigation = Platform.select({
  * Please comment each styled component using theme and refer to ThemeProvider
  * for clarity.
  */
+const RootNavigator = createRootNavigator()
 export const App = () =>
     <ThemeProvider theme={theme}>
-        <RootNavigation />
+      <RootNavigator />
     </ThemeProvider>

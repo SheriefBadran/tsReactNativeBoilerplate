@@ -30,6 +30,7 @@
     "@types/jest": "^21.1.5",
     "@types/react": "^16.0.22",
     "@types/react-native": "^0.50.2",
+    "@types/react-native-vector-icons": "^4.6.1",
     "babel-jest": "22.0.6",
     "babel-preset-react-native": "5.0.0",
     "jest": "22.0.6",
