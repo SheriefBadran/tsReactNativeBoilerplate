@@ -1,21 +1,7 @@
 import * as React from 'react'
-import {SwitchNavigator} from 'react-navigation'
 import { ThemeProvider } from 'styled-components'
 import {theme} from './components/ui/layout'
-import {SignedInNavigator} from './screens/signed-in-screen'
-import {SignedOut} from './screens/signed-out-screen'
-
-const createRootNavigator = (isSignedIn = false) =>
-  SwitchNavigator({
-    SignedIn: {
-      screen: SignedInNavigator
-    },
-    SignedOut: {
-      screen: SignedOut
-    },
-  }, {
-    initialRouteName: isSignedIn ? 'SignedIn' : 'SignedOut'
-  })
+import {createRootNavigator} from './navigators/root-navigator'
 
 /* DISABLE YELLOW ERROR BOX
   console.ignoredYellowBox = [
