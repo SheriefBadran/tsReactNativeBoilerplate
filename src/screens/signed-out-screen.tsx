@@ -27,9 +27,7 @@ export const SignedOut = ({navigation}) => (
     paddingVertical: 20,
   }}>
     <Button
-      style={{
-        backgroundColor: '#03A9F4'
-      }}
+      color='#03A9F4'
       title='SIGN IN'
       onPress={() => navigation.navigate('SignedIn')}
     />
