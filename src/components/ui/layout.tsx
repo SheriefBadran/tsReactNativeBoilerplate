@@ -17,6 +17,7 @@ export const headerTitleStyle = {
   fontWeight: '400',
   lineHeight: 27,
   color: '#4D4D4D',
+  width: '100%' // Fixes text-clipping bug on some phones
 }
 
 export type PaddedBoxProps = {
