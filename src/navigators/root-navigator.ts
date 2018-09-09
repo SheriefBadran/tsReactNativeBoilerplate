@@ -1,15 +1,15 @@
-import {SwitchNavigator} from 'react-navigation'
+import {createSwitchNavigator} from 'react-navigation'
 import {SignedInNavigator} from '../screens/signed-in-screen'
 import {SignedOut} from '../screens/signed-out-screen'
+import {Routes} from '../entities'
 
-export const createRootNavigator = (isSignedIn = false) =>
-  SwitchNavigator({
-    SignedIn: {
-      screen: SignedInNavigator
+export const createRootNavigator = (isSignedIn: boolean = false) =>
+  createSwitchNavigator(
+    {
+      [Routes.SignedIn]: SignedInNavigator,
+      [Routes.SignedOut]: SignedOut,
     },
-    SignedOut: {
-      screen: SignedOut
+    {
+      initialRouteName: isSignedIn ? Routes.SignedIn : Routes.SignedOut,
     },
-  }, {
-    initialRouteName: isSignedIn ? 'SignedIn' : 'SignedOut'
-  })
+  )
