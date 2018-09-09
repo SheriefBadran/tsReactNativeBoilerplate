@@ -1,6 +1,6 @@
 import {
-  TabBarBottom,
-  TabNavigator,
+  createMaterialTopTabNavigator,
+  createBottomTabNavigator,
 } from 'react-navigation'
 import {theme} from '../components/ui/layout'
 import {AboutIcon, HomeIcon} from '../components/ui/route-icons'
@@ -12,33 +12,36 @@ const labelStyle = {
   fontFamily: theme.fontFamily,
 }
 
-export const RootTabs = TabNavigator({
-  Home: {
-    screen: Welcome,
-    navigationOptions: {
-      tabBarLabel: 'Welcome',
-      tabBarIcon: HomeIcon,
+export const RootTabs = createMaterialTopTabNavigator(
+  {
+    Home: {
+      screen: Welcome,
+      navigationOptions: {
+        tabBarLabel: 'Welcome',
+        tabBarIcon: HomeIcon,
+      },
+    },
+    About: {
+      screen: About,
+      navigationOptions: {
+        tabBarLabel: 'About',
+        tabBarIcon: AboutIcon,
+      },
     },
   },
-  About: {
-    screen: About,
-    navigationOptions: {
-      tabBarLabel: 'About',
-      tabBarIcon: AboutIcon,
+  {
+    tabBarComponent: createBottomTabNavigator,
+    tabBarPosition: 'bottom',
+    animationEnabled: false,
+    swipeEnabled: false,
+    tabBarOptions: {
+      activeTintColor: activeColor,
+      inactiveTintColor: inactiveColor,
+      style: {
+        backgroundColor: '#FFFFFF',
+        paddingBottom: 4,
+      },
+      labelStyle,
     },
-  }
-}, {
-  tabBarComponent: TabBarBottom,
-  tabBarPosition: 'bottom',
-  animationEnabled: false,
-  swipeEnabled: false,
-  tabBarOptions: {
-    activeTintColor: activeColor,
-    inactiveTintColor: inactiveColor,
-    style: {
-      backgroundColor: '#FFFFFF',
-      paddingBottom: 4,
-    },
-    labelStyle,
   },
-})
+)
