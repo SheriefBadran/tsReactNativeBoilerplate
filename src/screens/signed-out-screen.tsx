@@ -1,5 +1,6 @@
 import * as React from 'react'
 import {Button, View} from 'react-native'
+import {Routes} from '../entities'
 
 export const SignedOut = ({navigation}) => (
   <View style={{
@@ -12,7 +13,7 @@ export const SignedOut = ({navigation}) => (
     <Button
       color='#03A9F4'
       title='SIGN IN'
-      onPress={() => navigation.navigate('SignedIn')}
+      onPress={() => navigation.navigate(Routes.SignedIn)}
     />
 </View>
 )
