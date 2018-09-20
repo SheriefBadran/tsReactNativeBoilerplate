@@ -12,7 +12,7 @@ const labelStyle = {
   fontFamily: theme.fontFamily,
 }
 
-export const RootTabs = createMaterialTopTabNavigator(
+export const RootTabs = createBottomTabNavigator(
   {
     Home: {
       screen: Welcome,
@@ -30,10 +30,6 @@ export const RootTabs = createMaterialTopTabNavigator(
     },
   },
   {
-    tabBarComponent: createBottomTabNavigator,
-    tabBarPosition: 'bottom',
-    animationEnabled: false,
-    swipeEnabled: false,
     tabBarOptions: {
       activeTintColor: activeColor,
       inactiveTintColor: inactiveColor,
