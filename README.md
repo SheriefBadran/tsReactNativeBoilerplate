@@ -21,7 +21,7 @@ Otherwise setup any other emulator and add
 ## Errors
 If you got `Could not resolve all dependencies for configuration ':app:_debugApkCopy'`, then rebuild the project with `react-native upgrade` and overwrite all android files if you got the error trying to build the android app. Then run `react-native link` to again link libraries that for example contain native code.
 
-### Adding new fonts for Android
+## Adding new fonts for Android
 1. Add all the font files needed to `/src/assets/fonts` in the react-native root folder.
 
 2. If not already done, tell react-native where the custom fonts are located. This is done by adding rnpm to package.json providing the path to the font files.
@@ -56,7 +56,7 @@ Rename TittiliumWeb-SemiBold.ttf into Tittilium Web_semi_bold.ttf
 Rename TittiliumWeb-SemiBoldItalic.ttf into Tittilium Web_semi_bold_italic.ttf 
 `
 
-### Adding new fonts for iOS
+## Adding new fonts for iOS
 1. Add all the font files needed to `/src/assets/fonts` in the react-native root folder.
 
 2. If not already done, tell react-native where the custom fonts are located. This is done by adding rnpm to package.json providing the path to the font files.
