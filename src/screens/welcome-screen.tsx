@@ -16,20 +16,15 @@ const Container = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
-  background-color: #F5FCFF;
+  background-color: #f5fcff;
 `
 
 export const Welcome = () => (
   <Container>
-    <WelcomeText>
-      Welcome to React Native!
-    </WelcomeText>
+    <WelcomeText>Welcome to React Native!</WelcomeText>
+    <InstructionsText>To get started, edit App.js</InstructionsText>
     <InstructionsText>
-      To get started, edit App.js
-    </InstructionsText>
-    <InstructionsText>
-      'Press Cmd+R to reload,\n' +
-      'Cmd+D or shake for dev menu'
+      'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu'
     </InstructionsText>
   </Container>
 )
