@@ -1,12 +1,8 @@
-import {
-  createMaterialTopTabNavigator,
-  createBottomTabNavigator,
-} from 'react-navigation'
+import {createBottomTabNavigator} from 'react-navigation'
 import {theme} from '../components/ui/layout'
 import {AboutIcon, HomeIcon} from '../components/ui/route-icons'
-import {About} from '../screens/about-screen'
-import {Welcome} from '../screens/welcome-screen'
 import {activeColor, inactiveColor} from '../style/colors'
+import {WelcomeStack, AboutStack} from './stack-navigator'
 
 const labelStyle = {
   fontFamily: theme.fontFamily,
@@ -15,14 +11,14 @@ const labelStyle = {
 export const RootTabs = createBottomTabNavigator(
   {
     Home: {
-      screen: Welcome,
+      screen: WelcomeStack,
       navigationOptions: {
         tabBarLabel: 'Welcome',
         tabBarIcon: HomeIcon,
       },
     },
     About: {
-      screen: About,
+      screen: AboutStack,
       navigationOptions: {
         tabBarLabel: 'About',
         tabBarIcon: AboutIcon,
