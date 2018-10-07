@@ -3,11 +3,13 @@ import {headerTitleStyle, headerStyle} from '../components/ui/layout'
 import {menuLeft} from '../components/ui/menu-left'
 import {Welcome} from '../screens/welcome-screen'
 import {About} from '../screens/about-screen'
+import {backArrow} from '../components/ui/back-arrow'
 
 const config = (title: string) => ({
   navigationOptions: ({navigation}: NavigationScreenProps) => ({
     title,
-    headerLeft: menuLeft({navigation}),
+    headerLeft: ({title, onPress}) =>
+      title ? backArrow({onPress}) : menuLeft({navigation}),
     headerStyle,
     headerTitleStyle,
   }),
