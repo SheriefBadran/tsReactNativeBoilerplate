@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components/native'
+import {Button} from 'react-native'
 
 const WelcomeText = styled.Text`
   text-align: center;
@@ -16,16 +17,19 @@ const Container = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
-  background-color: #F5FCFF;
+  background-color: #f5fcff;
 `
 
-export const About = () => (
+export const About = ({navigation}) => (
   <Container>
-    <WelcomeText>
-      About this boilerplate.
-    </WelcomeText>
+    <WelcomeText>About this boilerplate.</WelcomeText>
     <InstructionsText>
-      This boilerplate is set up with Typescript, ts-config-beanloop, styled components and Apollo GraphQL
+      This boilerplate is set up with Typescript, ts-config-beanloop, styled
+      components and Apollo GraphQL
     </InstructionsText>
+    <Button
+      title="Go to profile"
+      onPress={() => navigation.navigate('AboutProfile')}
+    />
   </Container>
 )
