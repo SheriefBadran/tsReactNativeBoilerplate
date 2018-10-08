@@ -10,6 +10,4 @@ export const menuLeft = ({navigation}) =>
       size={30}
       onPress={navigation.toggleDrawer}
     />
-  ) : (
-    undefined
-  )
+  ) : null
