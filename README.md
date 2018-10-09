@@ -73,3 +73,11 @@ Rename TittiliumWeb-SemiBoldItalic.ttf into Tittilium Web_semi_bold_italic.ttf
 run `react-native link`
 
 4. Make sure to find the font references in Info.plist, open the file from in iOS folder and look for the UIAppFonts key.
+
+## Setup Debugging
+React Native Debugger most importantly enables debugging in console, React DevTools Integration, Redux DevTools integration and Network inspect of Chrome Developer Tools.
+
+1. Install [React Native Debugger](https://github.com/jhen0409/react-native-debugger).
+2. Open the developer meny by shaking your device or by selecting "Shake Gesture" inside the Hardware menu in the iOS Simulator. You can also use the ⌘D keyboard shortcut when your app is running in the iOS Simulator, or ⌘M when running in an Anroid emulator on Mac OS AND CTRL+M on Windows and Linux.
+3. Press Start Remote JS Debugging.
+4. Start React Native Debugger and go to http://localhost:8081/debugger-ui/ in your browser.
