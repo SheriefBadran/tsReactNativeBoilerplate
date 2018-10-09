@@ -1,31 +1,32 @@
-import {
-  createDrawerNavigator,
-} from 'react-navigation'
+import {createDrawerNavigator} from 'react-navigation'
 import {CustomeDrawer} from '../components/ui/custom-drawer'
-import {AboutIcon, HomeIcon} from '../components/ui/route-icons'
-import {About} from '../screens/about-screen'
-import {Welcome} from '../screens/welcome-screen'
 import {activeColor, inactiveColor} from '../style/colors'
+import {HomeIcon, AboutIcon} from '../components/ui/route-icons'
+import {WelcomeStack, AboutStack} from './stack-navigator'
 
-export const RootDrawer = createDrawerNavigator({
-  Home: {
-    screen: Welcome,
-    navigationOptions: {
-      drawerLabel: 'Welcome',
-      drawerIcon: HomeIcon,
+export const RootDrawer = createDrawerNavigator(
+  {
+    Home: {
+      screen: WelcomeStack,
+      navigationOptions: {
+        drawerLabel: 'Welcome',
+        drawerIcon: HomeIcon,
+      },
+    },
+    About: {
+      screen: AboutStack,
+      navigationOptions: {
+        drawerLabel: 'About',
+        drawerIcon: AboutIcon,
+      },
     },
   },
-  About: {
-    screen: About,
-    navigationOptions: {
-      drawerLabel: 'About',
-      drawerIcon: AboutIcon,
+
+  {
+    contentComponent: CustomeDrawer,
+    contentOptions: {
+      activeTintColor: activeColor,
+      inactiveTintColor: inactiveColor,
     },
   },
-}, {
-  contentComponent: CustomeDrawer,
-  contentOptions: {
-    activeTintColor: activeColor,
-    inactiveTintColor: inactiveColor,
-  },
-})
+)

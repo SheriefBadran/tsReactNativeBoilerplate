@@ -1,7 +1,5 @@
 import * as React from 'react'
-
 import {Platform} from 'react-native'
-
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
 export const menuLeft = ({navigation}) =>
@@ -12,6 +10,4 @@ export const menuLeft = ({navigation}) =>
       size={30}
       onPress={navigation.toggleDrawer}
     />
-  ) : (
-    undefined
-  )
+  ) : null
