@@ -80,4 +80,16 @@ React Native Debugger most importantly enables debugging in console, React DevTo
 1. Install [React Native Debugger](https://github.com/jhen0409/react-native-debugger).
 2. Open the developer meny by shaking your device or by selecting "Shake Gesture" inside the Hardware menu in the iOS Simulator. You can also use the ⌘D keyboard shortcut when your app is running in the iOS Simulator, or ⌘M when running in an Anroid emulator on Mac OS AND CTRL+M on Windows and Linux.
 3. Press Start Remote JS Debugging.
-4. Start React Native Debugger and go to http://localhost:8081/debugger-ui/ in your browser.
+4. Start React Native Debugger or go to http://localhost:8081/debugger-ui/ in your browser.
+
+### Debugging performance on Android with systrace
+
+1. First run systrace as follows (set the length of time the trace will be collected in seconds as you like)`$ANDROID_HOME/platform-tools/systrace/systrace.py --time=4 -o trace-html sched gfx view -a tsReactNativeBoilerplate`
+2. At the end of the trace, systrace will give you a link to the trace which you can open in your browser
+3. Open a tab in chrome and go to `chrome://tracing`
+4. Click load in the upper left corner and choose the file systrace pointed at
+5. Click the `View Options` button and enable `Highlight VSync`, this way the 16ms frame boundaries will be highlighted
+
+For more detailed documentation, read further at Install [React Native Performance docs](https://facebook.github.io/react-native/docs/performance)
+
+
