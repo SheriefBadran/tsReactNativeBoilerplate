@@ -21,6 +21,27 @@ Otherwise setup any other emulator and add
 ## Errors
 If you got `Could not resolve all dependencies for configuration ':app:_debugApkCopy'`, then rebuild the project with `react-native upgrade` and overwrite all android files if you got the error trying to build the android app. Then run `react-native link` to again link libraries that for example contain native code.
 
+If you got `Unable to connect with remote debugger` error when running `react-native run-android`. Try the following:
+1. Press `Cmd + M`
+2. Go to `Dev settings > Debug server host & port for device`
+3. Set to `localhost:8081`
+4. Rerun the android app: `react-native run-android`
+
+Debugger is connected
+
+When creating a new android emulator and starting an app on it, and get the following error:
+
+`Android - java.lang.SecurityException: Permission Denial: starting Intent`
+Then go to the AndroidManifest.xml file and add/set `android:exported="true"`
+
+```xml
+      <activity android:name=".MainActivity"
+        android:exported="true"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+        android:windowSoftInputMode="adjustResize"
+      />
+```
+
 ## Adding new fonts for Android
 1. Add all the font files needed to `/src/assets/fonts` in the react-native root folder.
 
