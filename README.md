@@ -15,7 +15,7 @@ This will create the project-name folder and copy all the files there, except th
 
 4. Then `yarn` or `npm install`
 
-### Rename the project
+### Rename the whole project
 
 1. run `react-native upgrade` and just let react overwrite the android/ios files.
 
