@@ -23,9 +23,9 @@ This will create the project-name folder and copy all the files there, except th
 
 3. Delete all the directories with the old app name in `./ios`
 
-4. In index.js, change the app-name passed in as a first parameter to `AppRegistry.registerComponent` function.
+4. In `index.js`, change the app-name passed in as a first parameter to `AppRegistry.registerComponent` function.
 
-Alternative method: If the android and ios directories are deleted before step 5 (running `react-native upgrade`), step 6 and 7 are not needed.
+Alternative method: If the android and ios directories are deleted prior to step 5 (running `react-native upgrade`), step 6 and 7 are not needed.
 
 ## Start ios app
 run `react-native run-ios` or `yarn run-ios`
