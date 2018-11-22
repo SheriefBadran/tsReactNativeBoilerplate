@@ -1,13 +1,23 @@
 # tsReactNativeBoilerplate
 
 ## Advise on how to use this boilerplate repo
-git clone this repo and cd into the project. Then run:
-`git checkout-index -f -a --prefix=/{the-path-from-the-root-to-desired-folder}/{project-name}/`
+1. git clone this repo and cd into the project. Then run:
+`git checkout-index -f -a --prefix=/{the-path-from-the-root-to-desired-folder}/{project-name}/`   
 It is important to `not forget the / at the end`.
 This will create the project-name folder and copy all the files there, except the .git items.
 
-cd into the destination folder `project-name` and run `git init`, then run
+2. cd into the destination folder `project-name` and run `git init`, then run
 `git add .` and `git commit -m "initial commit"`
+
+3. Change the name attribute in `package.json`
+
+4. Then `yarn` or `npm install`
+
+5. run `react-native upgrade` and just let react overwrite the android/ios files.
+
+6. In index.js, change the app-name passed in as a first parameter to `AppRegistry.registerComponent` function.
+
+
 
 ## Start ios app
 run `react-native run-ios` or `yarn run-ios`
